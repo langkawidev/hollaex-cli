@@ -1,6 +1,6 @@
 #!/bin/bash 
 
-REPLACE_EXISTING_TO_LATEST=false
+REPLACE_EXISTING_TO_LATEST=true
 
 # Parameter support to specify version of the CLI to install.
 export HOLLAEX_INSTALLER_VERSION_TARGET=${1:-"master"}
@@ -32,7 +32,7 @@ if [[ "$REPLACE_EXISTING_TO_LATEST" == "true" ]]; then
 fi 
 
 echo "Cloning HollaEx CLI repo from git..."
-git clone https://github.com/bitholla/hollaex-cli.git -b $HOLLAEX_INSTALLER_VERSION_TARGET
+git clone https://github.com/langkawidev/hollaex-cli.git -b $HOLLAEX_INSTALLER_VERSION_TARGET
 
 
 chmod +x $(pwd)/hollaex-cli
